@@ -1,0 +1,2 @@
+This project aims to deploy a secure and scalable website on AWS using Terraform for infrastructure provisioning and CI/CD practices for automation and continuous deployment. 
+The website should provide high availability, consistent performance across regions, and be capable of handling a user load ranging from 10 to 1000 users.
