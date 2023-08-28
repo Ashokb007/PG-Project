@@ -22,19 +22,3 @@ if ($result->num_rows > 0) {
 }
 
 
-
-
-
-// Check if user exists
-//$query = "SELECT * FROM auth WHERE username='$username' AND password='$password'";
-//$result = $conn->query($query);
-
-//if ($result->num_rows == 1) {
-  //  echo "Login successful!";
-//} else {
-  //  echo "Login failed. Please check your username and password.";
-//}
-
-//$conn->close();
-
-?>
