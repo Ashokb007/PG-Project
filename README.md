@@ -1,3 +1,3 @@
 # PG-Project
 
-Automated CI/CD Pipeline for Secure, Highly Available, and Scalable Website Deployment using AWS and Terraform
+Automated CI/CD Pipeline For Web App Development Using 3-Tier AWS Architecture With Terraform
