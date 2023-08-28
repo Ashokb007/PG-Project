@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('1. Git Clone') {
+            steps {
+                sh 'rm -f *'
+                git branch: 'main', url: 'https://github.com/Ashokb007/PG-Project.git'
+            }
+        }
+		stage('2. Front_End') {
+            steps {
+                sshagent(['front_end_key']) {
+				    sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/PG-Project/index.html ubuntu@52.90.248.22:/var/www/html/'
+                     
+                }
+            }
+        }
+         stage('3. Back_end') {
+            steps {
+                sshagent(['front_end_key']) {
+                sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/PG-Project/*.php ubuntu@54.204.237.25:/var/www/html/'
+                    
+                }
+            }
+        }
+         
+    }
+}
