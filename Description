@@ -1,2 +1,3 @@
-This project aims to deploy a secure and scalable website on AWS using Terraform for infrastructure provisioning and CI/CD practices for automation and continuous deployment. 
-The website should provide high availability, consistent performance across regions, and be capable of handling a user load ranging from 10 to 1000 users.
+The objective of the 3-tier architecture is to develop a web application structure that separates presentation, application logic, and data layers. 
+The CI/CD pipeline using Jenkins aims to automate the web application delivery process, while also enhancing the security. 
+In an AWS environment, Terraform facilitates infrastructure as code, enabling efficient infrastructure provisioning and management.
