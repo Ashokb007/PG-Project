@@ -25,7 +25,8 @@ pipeline {
         stage ('4.DAST - OWASP ZAP') {
            steps {
                sshagent(['dast-key']) {
-               sh 'ssh -o  StrictHostKeyChecking=no ubuntu@44.202.113.233 "sudo docker run --rm -v /home/ubuntu:/zap/wrk/:rw -t owasp/zap2docker-stable zap-full-scan.py -t http://52.90.248.22/index.html -J report_json || true" '
+               sh 'docker pull owasp/zap2docker-stable'
+               sh 'ssh -o StrictHostKeyChecking=no ubuntu@44.202.113.233 "sudo docker run --rm -v /home/ubuntu:/zap/wrk/:rw -t owasp/zap2docker-stable zap-full-scan.py -t http://52.90.248.22/index.html -J report_json || true" '
               }      
            }
         }  
